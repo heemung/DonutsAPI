@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+@if (ViewBag.InnerDonut != null)
+{
+
+        <il><h1>@ViewBag.InnerDonut["name"]</h1></il>
+        <il><h2>@ViewBag.InnerDonut["calories"]</h2></il>
+        <il><h3>@ViewBag.InnerDonut["extras"]</h3></il>
+        <il><img src="@ViewBag.InnerDonut["photo"]" width="50%" alt="@ViewBag.InnerDonut["name"]" /></il>
+        <br />
+        <il>@ViewBag.InnerDonut["photo_attribution"]</il>
+
+}
+

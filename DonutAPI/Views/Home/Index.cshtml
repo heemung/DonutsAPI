@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@if (ViewBag.OuterDonut != null)
+{
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>Donut Name</th>
+
+    </tr>
+    @foreach (var arrayDonut in ViewBag.OuterDonut)
+    {
+    <tr>
+        <td><a href="/Home/Details?id=@arrayDonut["id"]">@arrayDonut["name"]</a></td>
+    </tr>
+    }
+</table>
+}
