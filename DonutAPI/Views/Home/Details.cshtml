@@ -10,7 +10,17 @@
 
         <il><h1>@ViewBag.InnerDonut["name"]</h1></il>
         <il><h2>@ViewBag.InnerDonut["calories"]</h2></il>
-        <il><h3>@ViewBag.InnerDonut["extras"]</h3></il>
+        <p>Extras</p>
+        <il><h3>@foreach (var extras in @ViewBag.InnerDonut["extras"])
+            {
+                <br \ /> @extras 
+            }
+            @if(ViewBag.InnerDonut["extras"].Count == 0)
+            {
+                <span>None</span>
+            }
+
+            </h3></il>
         <il><img src="@ViewBag.InnerDonut["photo"]" width="50%" alt="@ViewBag.InnerDonut["name"]" /></il>
         <br />
         <il>@ViewBag.InnerDonut["photo_attribution"]</il>
